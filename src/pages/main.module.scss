@@ -1,0 +1,107 @@
+@import "./utilities/master";
+
+.banner {
+    overflow: hidden;
+    span {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        color: $pink;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+    h2 {
+        font-size: 96px;
+        font-weight: 900;
+        line-height: 116px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 32px;
+    }
+    .row {
+        min-height: calc(100vh - 65px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    $imgWidth: 328px;
+    .imgDiv {
+        width: $imgWidth;
+        height: 519px;
+        position: absolute;
+        right: calc(20% - $imgWidth/2);
+
+        :first-child {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        :nth-child(2) {
+            position: absolute;
+            z-index: -1;
+            left: -180px;
+            top: -108px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .imgDiv {
+            right: calc((15% - 250px));
+            img:first-of-type {
+                height: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        h2 {
+            font-size: 76px;
+            line-height: 80px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        $imgWidth: 175px;
+        .imgDiv {
+            width: $imgWidth;
+            height: 278px;
+            right: calc((15% - 146px));
+            top: calc(((100vh - 65px) / 2) - (278px / 2));
+            //Half row height - half its size. Centers the robot vertically
+        }
+        h2 {
+            font-size: 48px;
+            line-height: 58.09px;
+        }
+        p {
+            margin-top: 20px;
+        }
+    }
+}
+
+// SECTION earlyBirds
+.earlyBirdsRow {
+    height: 320px;
+    background-image: url(../../public/images/section_2/background.png);
+    background-size: 110%;
+    background-position: center center;
+}
+
+// @media (min-width:576px) and (max-width: 768px) {
+// }
+@media (min-width: 992px) {
+    .earlyBirdsRow {
+        margin: 0 3vw 0 3vw;
+        margin-right: 3vw;
+        margin-left: 3vw; 
+        width: 94vw;
+        border-radius: 20px;
+    }
+}

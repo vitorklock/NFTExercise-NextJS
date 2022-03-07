@@ -1,0 +1,64 @@
+@import "../../../utilities/master";
+
+.header {
+    height: 65px;
+    z-index: 100;
+}
+
+.header *{
+    z-index: inherit;
+}
+
+.nav {
+    border-radius: 17px;
+    // height: 80px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1.1px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    padding: 0 25px 0 25px;
+    max-width: 90vw;
+}
+
+.navbarLinks .navbar-nav,
+.navbarBrand {
+    align-self: flex-end;
+}
+
+.navbarLinks {
+    // height: 80px;
+}
+
+.navbarLinks * {
+    font-size: 20px;
+    line-height: 20px;
+    color: $dark2 !important;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .navbarLinks * {
+        margin: 5vh 0 3vh 0;
+    }
+}
+
+.signUp {
+    color: $pink !important;
+    font-weight: 500;
+}
+
+.hiddenH1 {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+}
