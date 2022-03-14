@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-export function SignUpButton() {
+export function SignUpBtn() {
     return (
         <>
             <div className={styles.div}>

@@ -8,6 +8,7 @@ export function Header() {
             <Navbar expand="lg" className={`position-fixed vw-100 ${styles.nav}`}>
                 <h1 className={styles.hiddenH1}>nftlanding</h1>
                 <Container className={styles.container}>
+                    <div className={styles.blur}></div>
                     <Navbar.Brand className={styles.navBrand} href="#home">
                         <img
                             src="/images/logo.png"
@@ -20,10 +21,10 @@ export function Header() {
                     <Navbar.Toggle aria-controls="navbar-simples" />
                     <Navbar.Collapse id="navbar-simples" className={`${styles.navbarLinks} me-lg-5`}>
                         <Nav className="ms-auto me-lg-5">
-                            <Nav.Link key="0" href="#" className="text-center">Features</Nav.Link>
-                            <Nav.Link key="1" href="#" className="text-center">About</Nav.Link>
-                            <Nav.Link key="2" href="#" className="text-center">Launch</Nav.Link>
-                            <Nav.Link key="3" href="#" className={`${styles.signUp} text-center`}>Sign Up</Nav.Link>
+                            <Nav.Link key="0" href="#" className={`${styles.navLink} text-center`}>Features</Nav.Link>
+                            <Nav.Link key="1" href="#" className={`${styles.navLink} text-center`}>About</Nav.Link>
+                            <Nav.Link key="2" href="#" className={`${styles.navLink} text-center`}>Launch</Nav.Link>
+                            <Nav.Link key="3" href="#" className={`${styles.signUp} ${styles.navLink} text-center`}>Sign Up</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
