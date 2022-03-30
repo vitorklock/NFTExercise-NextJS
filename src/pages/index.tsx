@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import { SignUpBtn } from '../components/SignUpBtn';
 import { CardNft } from '../components/CardNft';
 import styles from './main.module.scss';
+import { SectionExibit } from '../components/SectionExibit';
 
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
             </Row>
             <SignUpBtn />
             <div className={`${styles.imgDiv}`}>
-              <img src="/images/section_1/robot.png" alt="New NFT!" />
+              <img src="/images/NFTs/robot.png" alt="New NFT!" />
               <img src="/images/section_1/robotBg.svg" alt="New NFT!" aria-hidden />
             </div>
           </Row>
@@ -67,7 +68,7 @@ export default function Home() {
             </Row>
             <div className={styles.CardsNft}>
               <CardNft className={styles.CardNft}
-                src={'./images/section_2/womanBeige.png'}
+                src={'./images/NFTs/womanBeige.png'}
                 width={"230px"} height={"290px"}
                 series="gloop series"
                 price={395}
@@ -77,7 +78,7 @@ export default function Home() {
                 theme="dark"
               />
               <CardNft className={styles.CardNft}
-                src={'./images/section_2/manPurple.png'}
+                src={'./images/NFTs/manPurple.png'}
                 width={"230px"} height={"290px"}
                 series="gloop series"
                 price={299}
@@ -101,34 +102,42 @@ export default function Home() {
         </section>
 
         <section className={styles.auctionSection}>
-          <Row className={`${styles.row } mx-3`}>
+          <Row className={`${styles.row } mx-3 mx-md-5`}>
             <h2>
               LE Super Rare Auction
             </h2>
           </Row>
-          <Row className={`${styles.row } mx-3`}>
+          <Row className={`${styles.row } mx-3 mx-md-5`}>
             <h3>
               We have released four limited edition NFTs early which can be bid on via <em>OpenSea</em>.
             </h3>
           </Row>
-          <div className={styles.auctionRow}>
-            <CardNft className={styles.CardNft} src={'./images/section_4/manPurple.png'} width={"300px"}
+          <div className={`${styles.auctionRow} px-5`}>
+            <CardNft className={styles.CardNft} src={'./images/NFTs/manPurple.png'} width={"300px"}
               height={"400px"} series="gloop series" price={299} name={'Purple Man'} code={12983}
               countdown={1}
             />
-            <CardNft className={styles.CardNft} src={'./images/section_4/womanBeige.png'} width={"300px"}
+            <CardNft className={styles.CardNft} src={'./images/NFTs/womanBeige.png'} width={"300px"}
               height={"400px"} series="gloop series" price={299} name={'Beige'} code={12983}
               countdown={1}
             />
-            <CardNft className={styles.CardNft} src={'./images/section_4/manRed.png'} width={"300px"}
+            <CardNft className={styles.CardNft} src={'./images/NFTs/manRed.png'} width={"300px"}
               height={"400px"} series="gloop series" price={299} name={'Red Man'} code={12983}
               countdown={1}
             />
-            <CardNft className={styles.CardNft} src={'./images/section_4/womanGreen.png'} width={"300px"}
+            <CardNft className={styles.CardNft} src={'./images/NFTs/womanGreen.png'} width={"300px"}
               height={"400px"} series="gloop series" price={299} name={'Green'} code={12983}
               countdown={1}
             />
           </div>
+          
+          <SectionExibit 
+            name="Purple Man"
+            series="gloop series"
+            code={12983}
+            releaseDate="20/04"
+            src="./images/NFTs/manRedNoBG.png"
+          />
         </section>
       </body>
     </>

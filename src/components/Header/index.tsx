@@ -11,7 +11,7 @@ export function Header() {
                     <div className={styles.blur}></div>
                     <Navbar.Brand className={styles.navBrand} href="#home">
                         <img
-                            src="/images/logo.png"
+                            src="/images/logo.svg"
                             width="198"
                             height="36"
                             className="d-inline-block align-top"

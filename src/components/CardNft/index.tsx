@@ -12,7 +12,7 @@ interface CardNft extends React.HTMLProps<HTMLDivElement> {
     code: number;
     countdown: any;
     theme?: 'light' | 'dark';
-    slim?: any;
+    slim?: boolean;
 }
 
 export function CardNft(props: CardNft) {

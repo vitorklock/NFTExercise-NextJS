@@ -1,0 +1,74 @@
+@import "../../../utilities/master";
+
+.section {
+    margin-top: 50px;
+    .row {
+        width: calc(100% - 160px);
+        margin: 0 80px 0 80px;
+        padding: 0px 40px 0 40px;
+        background-color: pink;
+        border-radius: 16px;
+        max-height: calc(100vh - 100px);
+    }
+
+    * {
+        color: $dark2;
+        font-size: 20px;
+    }
+
+    h4 {
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        color: $dark1;
+    }
+
+    p {
+        line-height: 30px;
+        em {
+            text-decoration: underline;
+        }
+    }
+
+    a {
+        font-weight: 500;
+        line-height: 30px;
+        color: $pink;
+        text-decoration: none;
+    }
+
+    .imgCol {
+        // margin-top: 40px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        max-height: calc(100vh - 100px);
+        img {
+            height: 100%;
+            margin-top: 10px;
+        }
+        .series {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 12px;
+            color: $pink;
+        }
+        .name {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+            color: $dark1;
+        }
+        .code {
+            font-family: Inter;
+            font-size: 18px;
+            line-height: 18px;
+            color: dark3;
+        }
+    }
+}
