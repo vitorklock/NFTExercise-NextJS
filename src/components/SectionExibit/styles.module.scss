@@ -71,4 +71,13 @@
             color: dark3;
         }
     }
+
+    .cardCol {
+        display: flex;
+        justify-content: center;
+
+        .CardNft {
+            margin: 60px 0;
+        }
+    }
 }
