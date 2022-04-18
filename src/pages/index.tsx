@@ -113,7 +113,7 @@ export default function Home() {
                 We have released four limited edition NFTs early which can be bid on via <em>OpenSea</em>.
               </h3>
             </Row>
-            <div className={`${styles.auctionRow} px-5`}>
+            <div className={`${styles.auctionRow} px-5 mb-5`}>
               <CardNft className={styles.CardNft} src={'./images/NFTs/manPurple.png'} width={"300px"}
                 height={"400px"} series="gloop series" price={299} name={'Purple Man'} code={12983}
                 countdown={1}
@@ -138,14 +138,17 @@ export default function Home() {
               code={12983}
               releaseDate="20/04"
               src="./images/NFTs/manRedNoBG.png"
+              bgImage="url('./images/section_4/bgFirst.svg')"
+              bgColor="#FFF0E8"
             />
             <SectionExibit
-              name="Purple Man"
+              name="Brown Woman"
               series="gloop series"
               code={12983}
               releaseDate="20/04"
-              src="./images/NFTs/manRedNoBG.png"
-              card
+              src="./images/NFTs/womanBrown.png"
+              bgImage="url('./images/section_4/bgSecond.svg')"
+              card cardPrice="395" cardCountdown="1" cardWidth="350px"
             />
           </section>
         </main>

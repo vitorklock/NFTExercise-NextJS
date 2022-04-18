@@ -9,33 +9,32 @@ interface SectionExibit extends React.HTMLProps<HTMLDivElement> {
     releaseDate: string;
     card?: boolean;
     src: string;
+    bgImage: string;
+    bgColor?: string;
+    cardPrice?: string | number;
+    cardCountdown?: string;
+    cardSlim?: boolean;
+    cardWidth?: string;
+    cardHeight?: string;
 }
 
 export function SectionExibit(props: SectionExibit) {
     if (props.card) {
         return (
             <section className={`${styles.section}`}>
-                <Row className={styles.row}>
-                    <Col xs="5" xl="6" className={`${styles.cardCol} order-first`}>
-                        {/* <Col xs="8">
-                            <img src={props.src} alt="A new NFT!" />
-                        </Col>
-                        <Col xs="4" className="d-flex align-items-end">
-                            <div className="mb-5">
-                                <span className={styles.series}>{props.series}</span>
-                                <h4>{props.name}</h4>
-                                <span className={styles.code}>{props.code}</span>
-                            </div>
-                        </Col> */}
+                <Row className={styles.row} style={{ backgroundImage: `${props.bgImage}`, backgroundColor: `${props.bgColor}` }}>
+                    <Col xs="12" lg="5" xl="6" className={`${styles.cardCol} order-first order-lg-last`}>
                         <CardNft className={`${styles.CardNft}`}
-                            src={'./images/NFTs/womanGreen.png'}
-                            width={"300px"} height={"400px"}
-                            series="gloop series" price={299}
-                            name={'Green'} code={12983}
-                            countdown={1} theme="dark"
+                            src={props.src}
+                            width={props.cardWidth ? props.cardWidth : "300px"}
+                            height={props.cardHeight ? props.cardHeight : "400px"}
+                            series={props.series} price={Number(props.cardPrice)}
+                            name={props.name} code={props.code}
+                            countdown={props.cardCountdown} theme="dark"
+                            slim={props.cardSlim}
                         />
                     </Col>
-                    <Col xs="7" xl="6" className="d-flex flex-column justify-content-center pe-5">
+                    <Col xs="12" lg="7" xl="6" className="d-flex flex-column justify-content-center px-5 ps-lg-0">
                         <h5>Initial Release {props.releaseDate}</h5>
                         <p>
                             We have released four limited edition NFTs early which can be bid on via <em>OpenSea</em>.
@@ -56,27 +55,17 @@ export function SectionExibit(props: SectionExibit) {
         )
     } else {
         return (
-            <section className={`${styles.section} ${styles.sectionCol}`}>
-                <Row className={styles.row}>
-                    <Col xs="5" xl="6" className={`${styles.imgCol} order-last`}>
-                        {/* <Col xs="8">
-                            <img src={props.src} alt="A new NFT!" />
-                        </Col>
-                        <Col xs="4" className="d-flex align-items-end">
-                            <div className="mb-5">
-                                <span className={styles.series}>{props.series}</span>
-                                <h4>{props.name}</h4>
-                                <span className={styles.code}>{props.code}</span>
-                            </div>
-                        </Col> */}
+            <section className={`${styles.section}`}>
+                <Row className={styles.row} style={{ backgroundImage: `${props.bgImage}`, backgroundColor: `${props.bgColor}` }}>
+                    <Col xs="12" lg="5" xl="6" className={`${styles.imgCol} order-first order-lg-last`}>
                         <img src={props.src} alt="A new NFT!" />
-                        <div className="mb-5">
+                        <div className={`${styles.info} mb-5 d-none d-xl-block`}>
                             <span className={styles.series}>{props.series}</span>
                             <h4>{props.name}</h4>
                             <span className={styles.code}>{props.code}</span>
                         </div>
                     </Col>
-                    <Col xs="7" xl="6" className="d-flex flex-column justify-content-center pe-5">
+                    <Col xs="12" lg="7" xl="6" className="d-flex flex-column justify-content-center px-5 ps-lg-0 mt-5 mt-lg-0">
                         <h5>Initial Release {props.releaseDate}</h5>
                         <p>
                             We have released four limited edition NFTs early which can be bid on via <em>OpenSea</em>.
@@ -93,7 +82,7 @@ export function SectionExibit(props: SectionExibit) {
                         </a>
                     </Col>
                 </Row>
-            </section>
+            </section >
         )
     }
 }
