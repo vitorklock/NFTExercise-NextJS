@@ -187,7 +187,7 @@ export default function Home() {
             </Row>
           </section>
           <section className={`${styles.banner} ${styles.ctaSection}`}>
-            <Row className={`${styles.row} mx-3 mx-lg-5`}>
+            <Row className={`${styles.row} ms-3 ms-lg-5`}>
               <Row>
                 <span>launching soon</span>
               </Row>

@@ -1,0 +1,166 @@
+@import "../../../utilities/master";
+
+.footer {
+    padding: 0 40px;
+    .container {
+        width: 300px;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+
+        img {
+            padding: 0;
+        }
+        .iconRow {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            gap: 16px;
+
+            a {
+                width: 21px;
+                height: 21px;
+                padding: 0;
+                margin: 0;
+
+                * {
+                    height: inherit;
+                    width: inherit;
+                }
+            }
+        }
+    }
+
+    a {
+        font-size: 20px;
+        line-height: 20px;
+        text-decoration: none;
+        color: $dark2;
+        margin-bottom: 10px;
+    }
+
+    @keyframes slidebg {
+        to {
+            background-position: calc(188px * 2);
+        }
+    }
+
+    a:hover,
+    .iconRow a:hover {
+        background: linear-gradient(
+            110deg,
+            rgba(255, 57, 152, 1) 0%,
+            rgba(255, 57, 57, 1) 16%,
+            rgba(255, 129, 57, 1) 50%,
+            rgba(57, 255, 160, 1) 69%,
+            rgba(255, 57, 152, 1) 93%,
+            rgba(255, 57, 57, 1) 16%,
+            rgba(255, 129, 57, 1) 50%
+        );
+        background-size: cover;
+        background-position: center center;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: slidebg 2s linear infinite;
+        transition: background-position 0.3s;
+    }
+
+    .iconRow a:hover {
+        background: linear-gradient(
+            110deg,
+            rgba(255, 57, 152, 1) 0%,
+            rgba(255, 57, 57, 1) 16%,
+            rgba(255, 129, 57, 1) 50%,
+            rgba(57, 255, 160, 1) 69%,
+            rgba(255, 57, 152, 1) 93%,
+            rgba(255, 57, 57, 1) 16%,
+            rgba(255, 129, 57, 1) 50%
+        );
+        background-size: 200%;
+        background-position: center center;
+        mask-repeat: no-repeat;
+        mask-size: 100%;
+        mask-position: center;
+        animation: slidebg 8s linear infinite;
+        transition: background-position 3s;
+        img {
+            opacity: 0;
+        }
+    }
+    .iconRow a.facebook:hover {
+        mask-image: url("../../../public/images/icons/facebook.svg");
+    }
+    .iconRow a.instagram:hover {
+        mask-image: url("../../../public/images/icons/instagram.svg");
+    }
+    .iconRow a.tiktok:hover {
+        mask-image: url("../../../public/images/icons/tiktok.svg");
+    }
+    .iconRow a.twitter:hover {
+        mask-image: url("../../../public/images/icons/twitter.svg");
+    }
+
+    .footerSection a {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        margin-bottom: 28px;
+    }
+
+    .footerLower {
+        margin: 80px 5vw;
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 20px;
+        line-height: 20px;
+        color: $dark4;
+
+        span {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        .container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .footer {
+        .container {
+            align-items: center;
+            * {
+                text-align: center;
+            }
+        }
+
+        .col {
+            margin-top: 40px;
+            a {
+                text-align: center;
+            }
+        }
+
+        .footerLower {
+            display: flex;
+            flex-direction: column;
+            margin: 80px 0;
+            span {
+                width: auto;
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    }
+}

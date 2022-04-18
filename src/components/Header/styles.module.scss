@@ -70,6 +70,31 @@
     transition: background-position 0.3s;
 }
 
+.navBrand:hover {
+    background: linear-gradient(
+        110deg,
+        rgba(255, 57, 152, 1) 0%,
+        rgba(255, 57, 57, 1) 16%,
+        rgba(255, 129, 57, 1) 50%,
+        rgba(57, 255, 160, 1) 69%,
+        rgba(255, 57, 152, 1) 93%,
+        rgba(255, 57, 57, 1) 16%,
+        rgba(255, 129, 57, 1) 50%
+    );
+    background-size: 200%;
+    background-position: center center;
+    mask-image: url("../../../public/images/logo.svg");
+
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    mask-position: center;
+    animation: slidebg 2s linear infinite;
+    transition: background-position 3s;
+    img {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 991px) {
     .navbarLinks * {
         margin: 5vh 0 3vh 0;
