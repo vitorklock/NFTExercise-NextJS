@@ -5,6 +5,7 @@ import { SignUpBtn } from '../components/SignUpBtn';
 import { CardNft } from '../components/CardNft';
 import styles from './main.module.scss';
 import { SectionExibit } from '../components/SectionExibit';
+import { Footer } from '../components/footer';
 
 
 export default function Home() {
@@ -142,15 +143,82 @@ export default function Home() {
               bgColor="#FFF0E8"
             />
             <SectionExibit
-              name="Brown Woman"
+              name="Brown"
               series="gloop series"
               code={12983}
               releaseDate="20/04"
               src="./images/NFTs/womanBrown.png"
               bgImage="url('./images/section_4/bgSecond.svg')"
-              card cardPrice="395" cardCountdown="1" cardWidth="350px"
+              card cardPrice="395" cardCountdown="1"
             />
           </section>
+          <section className={styles.etheriumSection}>
+            <Row className={`${styles.row}`}>
+              <Col xs='12' md="5" className={`${styles.col} px-4`}>
+                <Row className="pt-3">
+                  <img src="./images/icons/eth.png" alt="Etherium" />
+                </Row>
+                <Row className="my-3">
+                  <h2>An NFT like no other</h2>
+                </Row>
+                <Row>
+                  <p>
+                    Don’t miss out on the release of our new NFT. Sign up below to receive updates when we go live on 18/9.
+
+                    Don’t miss out on the release of our new NFT. Sign up below to receive updates when we go live on 18/9.Don’t miss out on the release of our new NFT.
+                  </p>
+                </Row>
+              </Col>
+              <Col xs='12' md="5" className={`${styles.col} px-4`}>
+                <Row className="pt-3">
+                  <img src="./images/icons/eth2.png" alt="Etherium" />
+                </Row>
+                <Row className="my-3">
+                  <h2>An NFT like no other</h2>
+                </Row>
+                <Row>
+                  <p>
+                    Don’t miss out on the release of our new NFT. Sign up below to receive updates when we go live on 18/9.
+
+                    Don’t miss out on the release of our new NFT. Sign up below to receive updates when we go live on 18/9.Don’t miss out on the release of our new NFT.
+                  </p>
+                </Row>
+              </Col>
+            </Row>
+          </section>
+          <section className={`${styles.banner} ${styles.ctaSection}`}>
+            <Row className={`${styles.row} mx-3 mx-lg-5`}>
+              <Row>
+                <span>launching soon</span>
+              </Row>
+              <Row>
+                <Col xs="9" sm="10" md="10" lg="8" xxl="6">
+                  <h2>
+                    An NFT like
+                    <br className="d-none" /> no other
+                  </h2>
+                </Col>
+              </Row>
+              <Row>
+                <Col
+                  xs="9" sm="7" md="7" lg="7" xxl="6"
+                  className="pe-0">
+                  <p>
+                    {`Don't miss out on the release of our new NFT.
+                  Sign up below to receive updates when we go live.`}
+                  </p>
+                </Col>
+              </Row>
+              <Row className={styles.signUpBtnRow}>
+                <SignUpBtn />
+              </Row>
+              <div className={`${styles.imgDiv}`}>
+                <img src="/images/NFTs/womanGreenBanner.png" alt="New NFT!" />
+                <img src="/images/section_cta/brownBg.svg" alt="New NFT!" aria-hidden />
+              </div>
+            </Row>
+          </section>
+          <Footer />
         </main>
       </body>
     </>

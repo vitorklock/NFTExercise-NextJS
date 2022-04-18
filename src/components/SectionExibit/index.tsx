@@ -18,6 +18,7 @@ interface SectionExibit extends React.HTMLProps<HTMLDivElement> {
     cardHeight?: string;
 }
 
+
 export function SectionExibit(props: SectionExibit) {
     if (props.card) {
         return (
@@ -85,4 +86,6 @@ export function SectionExibit(props: SectionExibit) {
             </section >
         )
     }
+    // if there is no card or src
+
 }
