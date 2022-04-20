@@ -24,6 +24,13 @@
     transition: background-position 0.3s;
 }
 
+@media (max-width: 575px) {
+    .div{
+        animation: slidebg 2s linear infinite;
+        transition: background-position 0.3s;
+    }
+}
+
 @keyframes slidebg {
     to {
         background-position: calc(188px * 2);
